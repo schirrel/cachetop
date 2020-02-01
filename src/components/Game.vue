@@ -71,6 +71,7 @@
         },
         computed : {
             ended: function() {
+                if(this.players.length ==1 )return false;
                 let withPoints = this.players.filter(p=> p.points>0);
                 return  withPoints.length > 1 ? false : withPoints[0]; 
             }
